@@ -27,9 +27,9 @@
                 <div class="row">
                     <div class="col-lg-7 offset-lg-5">
                         <div class="page-title-wrapper pt-255 pb-80 pl-65 pl-md-0 pl-xs-0 pt-lg-200 pt-md-200 pt-xs-200">
-                            <h1 class="page-title mb-55">Learn more about our <span>Sdot</span> data solution</h1>
-                            <h4 class="sub-title mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Libero perspiciatis sequi delectus maxime</h4>
-                            <h4 class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do Lorem ipsum dolor sit amet </h4>
+                            <h1 class="page-title mb-55">Learn more about <span>DCA</span></h1>
+                            <h4 class="sub-title mb-30">We are a data science firm. We provide our customers with the best services. Knowing that data is equally valuable, if not more valuable than gold today, we make sure that our customers get the best use of their data to help propel their organization or operations.</h4><br>
+                            <h4 class="sub-title mb-30">At a very reasonable and affordable cost, we provide a variety of services, ranging from data cleaning to the building of predictive machine learning models.</h4>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
         </div>
         <!-- page-title-area end -->
 
-        <!-- intro-card-area start -->
+        {% comment %} <!-- intro-card-area start -->
         <section class="intro-card-area gradient-gray pos-rel pt-250 pb-150 pt-md-130 pt-xs-130 pb-md-75 pb-xs-75">
              <img src="{% static 'img/shape/04.png' %}" alt="" class="data-shape shape_01 d-none d-md-inline-block">
              <img class="intro-shape shape_02" src="{% static 'img/shape/15.svg' %}" alt="">
@@ -86,7 +86,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <!-- intro-card-area end -->
         <!-- company-statictics start -->
         <section class="company-statistics pos-rel pt-170 pb-130 pt-md-90 pt-xs-90 pb-md-85 pb-xs-85">
@@ -96,20 +96,20 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4">
                         <div class="counters count-1 text-center mb-50">
-                            <h1 class="mb-30">+<span class="counter">15</span>k</h1>
-                            <h3 class="semi-title">Successful work</h3>
+                            <h1 class="mb-30">+<span class="counter">115</span></h1>
+                            <h3 class="semi-title">Successful Works</h3>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4">
                         <div class="counters count-2 text-center mb-50">
-                            <h1 class="mb-30"><span class="counter">17</span>%</h1>
-                            <h3 class="semi-title">increase in upgrade conversion</h3>
+                            <h1 class="mb-30"><span class="counter">73</span></h1>
+                            <h3 class="semi-title">Customers</h3>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4">
                         <div class="counters text-center mb-50">
-                            <h1 class="mb-30">+<span class="counter">40</span>k</h1>
-                            <h3 class="semi-title">Data Management</h3>
+                            <h1 class="mb-30">+<span class="counter">35</span></h1>
+                            <h3 class="semi-title">Active Works</h3>
                         </div>
                     </div>
                 </div>
@@ -125,14 +125,14 @@
                     <div class="col-xl-7 col-lg-6">
                         <div class="data-wrapper-2">
                             <div class="section-title wow fadeInUp2 animated" data-wow-delay="0.1s">
-                                <h2 class="mb-35">We’re a digital <span class="vector-shape">experience</span> data science agency</h2>
+                                <h2 class="mb-35">We’re an <span class="vector-shape">experienced</span>digital data science firm</h2>
                             </div>
-                            <h3 class="mb-50 wow fadeInUp2 animated" data-wow-delay="0.1s">Data Science sdot is one of the  leading platforms providin data scence Solution</h3>
+                            <h3 class="mb-50 wow fadeInUp2 animated" data-wow-delay="0.1s">Data Care Analytics is one of the leading firms providing data science Solutions</h3>
                             <div class="data-wrapper pr-200 mb-50 pr-lg-0 pr-md-0 pr-xs-0">
-                                <h3 class="mb-40">Who We are </h3>
-                                <h5 class="mb-55 wow fadeInUp2 animated" data-wow-delay="0.3s">Dolor sit amet consectetur elit sed eiusmod tempor incidi dunt labore dolore magna aliqua enim ad minim veniam quis nostrud</h5>
-                                <h3 class="mb-40">Our Goal</h3>
-                                <h5 class="wow fadeInUp2 animated" data-wow-delay="0.5s">Dolor sit amet consectetur elit sed eiusmod tempor incidi dunt labore dolore magna aliqua enim ad minim veniam quis nostrud</h5>
+                                {% comment %} <h3 class="mb-40">Who We are </h3> {% endcomment %}
+                                {% comment %} <h5 class="mb-55 wow fadeInUp2 animated" data-wow-delay="0.3s">Dolor sit amet consectetur elit sed eiusmod tempor incidi dunt labore dolore magna aliqua enim ad minim veniam quis nostrud</h5> {% endcomment %}
+                                <h3 class="mb-40"></h3>
+                                <h5 class="wow fadeInUp2 animated" data-wow-delay="0.5s">We are convinced that data science is the pillar of the new generation. The business expertise of our consultants, combined with the data scientists, allows us to support our customers across the universe of data to meet their business challenges.</h5>
                             </div>
                         </div>
                     </div>
@@ -145,8 +145,10 @@
             </div>
         </section>
         <!-- why-data-science end -->
+
+
        <!-- client-feedback start -->
-        <section class="client-feedback grey-bg pos-rel pt-160 pb-165 pt-md-90 pt-xs-90 pb-md-70 pb-xs-70">
+        {% comment %} <section class="client-feedback grey-bg pos-rel pt-160 pb-165 pt-md-90 pt-xs-90 pb-md-70 pb-xs-70">
             <div class="dot_01"></div>
             <img class="client-shape shape_02 " src="{% static 'img/shape/c1.png' %}" alt="">
             <img class="client-shape shape_03" src="{% static 'img/shape/t1.png' %}" alt="">
@@ -206,10 +208,12 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <!-- client-feedback end -->
+
+
         <!-- sdot-team start -->
-        <section class="sdot-team pos-rel pt-210 pb-130 pt-md-105 pt-xs-105 pb-md-80 pb-xs-80">
+        {% comment %} <section class="sdot-team pos-rel pt-210 pb-130 pt-md-105 pt-xs-105 pb-md-80 pb-xs-80">
             <img class="team-shape shape_01 d-none d-lg-inline-block" src="{% static 'img/line-shape/3a.svg' %}" alt="">
             <img class="team-shape shape_02 d-none d-lg-inline-block" src="{% static 'img/line-shape/3a.svg' %}" alt="">
             <div class="container">
@@ -249,10 +253,12 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <!-- sdot-team end -->
+
+
         <!-- get-quote start -->
-        <section class="get-quote grey-yellow-bg pos-rel pt-180 pb-130 pt-md-90 pt-xs-90 pb-md-50 pb-xs-50">
+        {% comment %} <section class="get-quote grey-yellow-bg pos-rel pt-180 pb-130 pt-md-90 pt-xs-90 pb-md-50 pb-xs-50">
             <img class="quote-shape shape_01 d-none d-md-inline-block" src="{% static 'img/shape/08.svg' %}" alt="">
             <img class="quote-shape shape_02 d-none d-md-inline-block" src="{% static 'img/shape/09.svg' %}" alt="">
             <img class="quote-shape shape_03 d-none d-md-inline-block" src="{% static 'img/shape/10.svg' %}" alt="">
@@ -290,8 +296,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <!-- get-quote end -->
+
+
         <!-- cat-area start -->
         <section class="cta-area pos-rel pt-170 pb-150 pt-md-90 pt-xs-90 pb-md-50 pb-xs-50">
             <img class="cta-shape shape_01 d-none d-md-inline-block" src="{% static 'img/shape/dot2a.svg' %}" alt="">
@@ -302,8 +310,8 @@
                         <div class="cta__wrapper mb-50 text-center">
                             <div class="section-title">
                                 <h2 class="mb-45">Start visualizing your data today.</h2> 
-                                <h4 class="sub-title mb-45">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt dolor sit amet consectetur </h4>
-                                <a href="services.html" class="theme_btn">More Services</a>
+                                <h4 class="sub-title mb-45">We take big data and create customized visual reporting that is specific to your business model so decisions can be made more effectively throughout your business.</h4>
+                                <a href="{% url 'services' %}" class="theme_btn">More Services</a>
                                 <span class="round-shape"></span>
                             </div>
                         </div>

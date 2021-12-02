@@ -156,6 +156,7 @@
     </aside>
 
     <div class="body-overlay"></div>
+    {% include 'base/messages.html' %}
 
     
     <!-- slide-bar end -->
@@ -181,7 +182,7 @@
                                     <img src="{% static 'img/logo/logo_new.svg' %}" alt="">
                                 </a>
                             </div>
-                            <span class="addres-details mb-25">821 11h Street, Office 372 Berlin, De 1524 GA</span>
+                            {% comment %} <span class="addres-details mb-25">821 11h Street, Office 372 Berlin, De 1524 GA</span> {% endcomment %}
                             <div class="footer__social mb-40">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -197,13 +198,13 @@
                                 <li><a href="{% url 'about' %}">About us</a></li>
                                 {% comment %} <li><a href="blog-details.html">Our News</a></li> {% endcomment %}
                                 {% comment %} <li><a href="case-2.html">Our Protfolio</a></li> {% endcomment %}
-                                <li><a href="{% url 'services' %}">Solution</a></li>
+                                <li><a href="{% url 'services' %}">Services</a></li>
                                 <li><a href="{% url 'contact' %}">Contacts</a></li>
                                 {% comment %} <li><a href="case-3.html">Our Careers</a></li> {% endcomment %}
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6  wow fadeInUp2 animated" data-wow-delay='.5s'>
+                    {% comment %} <div class="col-xl-3 col-lg-4 col-md-6  wow fadeInUp2 animated" data-wow-delay='.5s'>
                         <div class="footer__widget mb-25 pl-65 pl-md-0 pl-xs-0">
                             <h4 class="widget-title mb-40">Help & Support</h4>
                             <ul class="fot-list">
@@ -214,22 +215,23 @@
                                 <li><a href="#">Data analysis</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
                     <div class="col-xl-4 col-lg-6 col-md-6  wow fadeInUp2 animated" data-wow-delay='.7s'>
                         <div class="footer__widget mb-30">
                             <h4 class="widget-title mb-40">Our Address</h4>
                             <ul class="fot-list mb-30">
                                 <li>
-                                    <a href="#">Sinfosdot@gmail.com</a>
+                                    <a href="#">datacareanalyticsorg@gmail.com</a>
                                 </li>
                                 <li>
-                                    <a href="#">+88 016 826 48 11</a>
+                                    <a href="#">+233 24 853 2094</a>
                                 </li>
                             </ul>
                             <div class="foter-subscribe">
                                 <h6 class="mb-20">SIGN UP FOR NEWSLETTER</h6>
-                                <form class="subscribe-form" action="../../../external.html?link=https://themazine.com/html/sdot/form.php">
-                                    <input class="mb-15" type="text" placeholder="Email address">
+                                <form class="subscribe-form" action="{% url 'subscribe' %}" method='POST'>
+                                {% csrf_token %}
+                                    <input class="mb-15" type="email" placeholder="Email address" name="email">
                                     <button class="theme_btn fot_sub_btn">Subscirbe</button>
                                 </form>
                             </div>
@@ -240,7 +242,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12">
                         <div class="copyright mb-45 text-center text-md-left">
-                            <p>© Copyright 2021 Themazine</p>
+                            <p>© Copyright 2021 Data Care Analytics</p>
                         </div>
                     </div>
                 </div>

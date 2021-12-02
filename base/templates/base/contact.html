@@ -25,8 +25,11 @@
                 <div class="row no-gutters">
                     <div class="col-lg-6">
                         <div class="page-title-wrapper pt-230 pb-115 pt-md-200 pb-md-25 pt-xs-200 pb-xs-25">
-                            <h1 class="page-title mb-40">Send us your message</h1>
-                            <h4 class="sub-title mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Libero perspiciatis sequi delectus maxime</h4>
+                            <h1 class="page-title mb-40">Send Us Your Message</h1>
+                           <br/>
+                           <br/>
+                           
+                            {% comment %} <h4 class="sub-title mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Libero perspiciatis sequi delectus maxime</h4> {% endcomment %}
                         </div>
                     </div>
                 </div>
@@ -50,23 +53,25 @@
                         <div class="blog-form contact-form grey-bg mb-50">
                             <h3 class="comments-title mb-35">Send a message</h3>
                             <h5 class="mb-55">Lorem ipsum dolor sit amet consectetur adipiscing elit.Ut blandit arcu in pretium.</h5>
-                            <form class="subscribe-form" action="#">
+                            <form class="subscribe-form" action="{% url 'send_message' %}" method="POST">
+                            {% csrf_token %}
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-12 black-active mb-20">
-                                        <input type="text" id="name" placeholder="Full Name"> 
+                                        <input type="text" id="name" placeholder="Full Name" name="name"> 
                                     </div>
                                     <div class="col-xl-6 col-lg-12 mb-20">
-                                        <input type="email" id="email" placeholder="Email Address"> 
+                                        <input type="email" id="email" placeholder="Email Address" name="email"> 
                                     </div>
                                     <div class="col-lg-12 mb-20">
-                                        <input type="text" id="topic" placeholder="Your topic"> 
+                                        <input type="text" id="topic" placeholder="Your topic" name="topic"> 
                                     </div>
                                     <div class="col-lg-12 mb-30">
                                         <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Write your comment "></textarea>
                                     </div>
                                 </div>
+                                <button class="theme_btn quote_btn_lg mb-35" type="submit">Submit Message</button>
                             </form>
-                            <button class="theme_btn quote_btn_lg mb-35">Submit Message</button>
+                            
                         </div>
                     </div>
                 </div>
@@ -90,16 +95,17 @@
                         <div class="info-boxes text-center mb-50">
                             <img class="mb-35" src="{% static 'img/icon/b1.svg' %}" alt="">
                             <h3 class="mb-55">Phone</h3>
-                            <h5>+233248532094</h5>
-                            <h5>+233541752049</h5>
+                            <a href="tel:+233248532094"><h5 style="color: blue;">+233-248532094</h5></a>
+                            <a href="tel:+233541752049"><h5 style="color: blue;">+233-541752049</h5></a>
+                            
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4">
                         <div class="info-boxes text-center mb-50">
                             <img class="mb-35" src="{% static 'img/icon/b2.svg' %}" alt="">
                             <h3 class="mb-55">Email</h3>
-                            <h5>datacareanalyticsorg@gmail.com</h5>
-                            <h5>kojo.akrasiennin@gmail.com</h5>
+                            <a href="mailto:datacareanalyticsorg@gmail.com"><h5 style="color: blue;">datacareanalyticsorg@gmail.com</h5></a>
+                            <a href="mailto:kojo.akrasiennin@gmail.com"><h5 style="color: blue;">kojo.akrasiennin@gmail.com</h5></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4">
@@ -115,7 +121,7 @@
         </section>
         <!-- info-box-area end -->
         <!-- cat-area start -->
-        <section class="cta-area pos-rel pt-180 pb-150 pt-md-90 pt-xs-90 pb-md-50 pb-xs-50">
+         <section class="cta-area pos-rel pt-170 pb-150 pt-md-90 pt-xs-90 pb-md-50 pb-xs-50">
             <img class="cta-shape shape_01 d-none d-md-inline-block" src="{% static 'img/shape/dot2a.svg' %}" alt="">
             <img class="cta-shape shape_02" src="{% static 'img/cta/01.svg' %}" alt="">
             <div class="container">
@@ -124,7 +130,7 @@
                         <div class="cta__wrapper mb-50 text-center">
                             <div class="section-title">
                                 <h2 class="mb-45">Start visualizing your data today.</h2> 
-                                <h4 class="sub-title mb-45">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt dolor sit amet consectetur </h4>
+                                <h4 class="sub-title mb-45">We take big data and create customized visual reporting that is specific to your business model so decisions can be made more effectively throughout your business.</h4>
                                 <a href="{% url 'services' %}" class="theme_btn">More Services</a>
                                 <span class="round-shape"></span>
                             </div>

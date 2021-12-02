@@ -22,25 +22,27 @@
                 <img class="page-shape shape_02" src="{% static 'img/line-shape/3a.svg' %}" alt="">
                 <span class="speacial-text">Services</span>
             </div>
-            <div class="video-wrapper">
+            {% comment %} <div class="video-wrapper">
                 <a class="popup-video" href="../../../external.html?link=https://www.youtube.com/watch?v=q2Ruz1dHnow">
                     <img src="{% static 'img/icon/play.svg' %}" alt=""></a>
-            </div>
+            </div> {% endcomment %}
             <div class="container">
                 <div class="row no-gutters">
                     <div class="col-lg-7 offset-lg-5">
                         <div class="page-title-wrapper pt-255 pb-80 pl-55 pt-lg-200 pt-md-200 pt-xs-200 pl-md-0 pl-xs-0">
-                            <h1 class="page-title mb-55">About our data strategy <span>Services</span> solution</h1>
-                            <h4 class="sub-title mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Libero perspiciatis sequi delectus maxime</h4>
-                            <h4 class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do Lorem ipsum dolor sit amet </h4>
+                            <h1 class="page-title mb-55">Services  <br/><span>Data Care Analytics</span> <br/>Offers</h1>
+                            <h4 class="sub-title mb-30">We have the expertise to provide a variety of data science services to meet the needs of your organization.</h4>
+                            {% comment %} <h4 class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do Lorem ipsum dolor sit amet </h4> {% endcomment %}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- page-title-area end -->
+
+
         <!-- intro-card-area start -->
-        <section class="intro-card-area gradient-gray pos-rel pt-270 pb-150 pt-md-150 pt-xs-150 pb-md-75 pb-xs-75">
+        {% comment %} <section class="intro-card-area gradient-gray pos-rel pt-270 pb-150 pt-md-150 pt-xs-150 pb-md-75 pb-xs-75">
              <img src="{% static 'img/shape/04.png' %}" alt="" class="data-shape shape_01">
              <img class="intro-shape shape_02" src="{% static 'img/shape/15.svg' %}" alt="">
              <img class="intro-shape shape_03" src="{% static 'img/shape/16.svg' %}" alt="">
@@ -88,7 +90,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <!-- intro-card-area end -->
         <!-- sdot-services start -->
         <section class="sdot-services sdot-bottom-shape yellow-soft-bg pos-rel pt-160 pb-75 pt-md-90 pt-xs-90 pb-md-50 pb-xs-50">
@@ -99,83 +101,39 @@
                 <div class="row align-items-end mb-90">
                     <div class="col-xl-9 col-lg-8">
                         <div class="section-title text-center text-lg-left mb-45 mb-md-15 mb-xs-15">
-                            <h2 class="mb-0">Our offer data</h2>
-                            <h2>science and analytics <span class="vector-shape s-serv-shape">services</span></h2>
+                            <h2 class="mb-0">Our data science</h2>
+                            <h2> and analytics <span class="vector-shape s-serv-shape">services</span></h2>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 text-center text-lg-right">
+                    {% comment %} <div class="col-xl-3 col-lg-4 text-center text-lg-right">
                         <div class="more_services_btn mb-45 wow fadeInUp2 animated mt-60" data-wow-delay="0.1">
                             <a href="services.html" class="theme_btn">More Services</a>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
                 </div>
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp2 animated" data-wow-delay="0.1s">
-                        <div class="s-services s-services-02 swipe-right text-center mb-30">
-                           <div class="s-services__icon">
-                                <img class="s-icon mb-50 wow animated fadeInDown" data-wow-delay="0.1s" src="img/icon/02.png" alt="">
-                           </div>
-                            <p class="mb-20">Start your AI</p>
-                            <h3 class="mb-40">Data strategies Goal Start your AI</h3>
-                            <a class="long-arrow" href="services.html"><img src="{% static 'img/icon/long-right-arrow.svg' %}" alt=""></a>
+                    
+                    {% for service in services %}
+                    
+                        <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp2 animated" data-wow-delay="0.1s">
+                            <div class="s-services s-services-02 swipe-right text-center mb-30">
+                            <div class="s-services__icon">
+                                    <img class="s-icon mb-50 wow animated fadeInDown" data-wow-delay="0.1s" src="{{service.icon.url}}" alt="">
+                            </div>
+                                <p class="mb-20">{{service.brief_desc}}</p>
+                                <h3 class="mb-40">{{service.title}}</h3>
+                                {% comment %} <a class="long-arrow" href="services.html"><img src="{% static 'img/icon/long-right-arrow.svg' %}" alt=""></a> {% endcomment %}
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp2 animated" data-wow-delay="0.3s">
-                        <div class="s-services s-services-02 swipe-right text-center mb-30">
-                           <div class="s-services__icon">
-                                <img class="s-icon mb-50 wow animated fadeInDown" data-wow-delay="0.1s" src="{% static 'img/icon/03.png' %}" alt="">
-                           </div>
-                            <p class="mb-20">Data Analysis</p>
-                            <h3 class="mb-40">Digital Data Consulting for Science lab</h3>
-                            <a class="long-arrow" href="services.html"><img src="{% static 'img/icon/long-right-arrow.svg' %}" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp2 animated" data-wow-delay="0.5s">
-                        <div class="s-services s-services-02 swipe-right text-center mb-30">
-                           <div class="s-services__icon">
-                                <img class="s-icon mb-50 wow animated fadeInDown" data-wow-delay="0.1s" src="{% static 'img/icon/04.png' %}" alt="">
-                           </div>
-                            <p class="mb-20">Data Intelligence</p>
-                            <h3 class="mb-40">Business Intelligence for Digital Science</h3>
-                            <a class="long-arrow" href="services.html"><img src="{% static 'img/icon/long-right-arrow.svg' %}" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp2 animated" data-wow-delay="0.7s">
-                        <div class="s-services s-services-02 swipe-right text-center mb-30">
-                           <div class="s-services__icon">
-                                <img class="s-icon mb-50 wow animated fadeInDown" data-wow-delay="0.1s" src="{% static 'img/icon/05.png' %}" alt="">
-                           </div>
-                            <p class="mb-20">Machine Learning</p>
-                            <h3 class="mb-40">Machine learning is a method data analysis</h3>
-                            <a class="long-arrow" href="services.html"><img src="{% static 'img/icon/long-right-arrow.svg' %}" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp2 animated" data-wow-delay="0.9s">
-                        <div class="s-services s-services-02 swipe-right text-center mb-30">
-                           <div class="s-services__icon">
-                                <img class="s-icon mb-50 wow animated fadeInDown" data-wow-delay="0.1s" src="{% static 'img/icon/s1.svg' %}" alt="">
-                           </div>
-                            <p class="mb-20">Data strategies</p>
-                            <h3 class="mb-40">Data strategies for Business Intelligence </h3>
-                            <a class="long-arrow" href="services.html"><img src="{% static 'img/icon/long-right-arrow.svg' %}" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp2 animated" data-wow-delay="0.11s">
-                        <div class="s-services s-services-02 swipe-right text-center mb-30">
-                           <div class="s-services__icon">
-                                <img class="s-icon mb-50 wow animated fadeInDown" data-wow-delay="0.1s" src="{% static 'img/icon/s2.svg' %}" alt="">
-                           </div>
-                            <p class="mb-20">Data Science</p>
-                            <h3 class="mb-40">Data Science And AI Consulting</h3>
-                            <a class="long-arrow" href="services.html"><img src="{% static 'img/icon/long-right-arrow.svg' %}" alt=""></a>
-                        </div>
-                    </div>
+
+                    {% endfor %}
+                    
                 </div>
             </div>
         </section>
         <!-- sdot-services end -->
          <!-- how-it-work start -->
-        <section class="how-it-work pos-rel pt-180 pb-130 pt-md-120 pt-xs-120 pb-md-90 pb-xs-40">
+        {% comment %} <section class="how-it-work pos-rel pt-180 pb-130 pt-md-120 pt-xs-120 pb-md-90 pb-xs-40">
             <img class="work-shape shape_01" src="{% static 'img/shape/07.svg' %}" alt="">
             <img class="work-shape shape_02" src="{% static 'img/shape/09.svg' %}" alt="">
             <img class="work-shape shape_03" src="{% static 'img/shape/09.svg' %}" alt="">
@@ -223,7 +181,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <!-- how-it-work end -->
         <!-- why-data-science start -->
         <section class="why-data-science fix pos-rel pt-50 pb-105">
@@ -234,13 +192,13 @@
                     <div class="col-lg-6">
                         <div class="data-wrapper data-wrapper-2 mb-50">
                              <div class="section-title wow fadeInUp2 animated" data-wow-delay="0.1s">
-                                <h2 class="mb-35">We’re a digital data science agency</h2>
+                                <h2 class="mb-35">We’re a digital data science firm</h2>
                             </div>
-                            <h3 class="mb-50 wow fadeInUp2 animated" data-wow-delay="0.1s">We apprriciate trust greatly</h3>
-                            <h3 class="mb-45">Who We are </h3>
-                            <h5 class="mb-40 pr-90 pr-xs-0 wow fadeInUp2 animated" data-wow-delay="0.3s">Dolor sit amet consectetur elit sed eiusmod tempor incidi dunt labore dolore magna aliqua enim ad minim veniam quis nostrud</h5>
-                            <h3 class="mb-45">What we do </h3>
-                            <h5 class="wow fadeInUp2 animated pr-90 pr-xs-0" data-wow-delay="0.5s">Dolor sit amet consectetur elit sed eiusmod tempor incidi dunt labore dolore magna aliqua enim ad minim veniam quis nostrud</h5>
+                            <h3 class="mb-50 wow fadeInUp2 animated" data-wow-delay="0.1s">We appreciate trust greatly</h3>
+                            <h3 class="mb-45">Do you want to work with us? </h3>
+                            <h5 class="mb-40 pr-90 pr-xs-0 wow fadeInUp2 animated" data-wow-delay="0.3s">It is really great you want work with us, contact us now, let us help you turn your data into a useful asset.</h5>
+                            <h3 class="mb-45">Are you worrying about pricing?</h3>
+                            <h5 class="wow fadeInUp2 animated pr-90 pr-xs-0" data-wow-delay="0.5s">DCA is one of the best platforms providing flawless data science solutions at an affordable price. Get in touch with us and you will love us for our great services and affordable pricing.</h5>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -252,36 +210,12 @@
             </div>
         </section>
         <!-- why-data-science end -->
-        <!-- company-statictics start -->
-        <section class="company-statistics pos-rel pt-100 pb-140 pt-md-80 pt-xs-80 pb-md-50 pb-xs-50">
-            <img class="count-shape count-sh-02 shape_01" src="{% static 'img/shape/c1.png' %}" alt="">
-            <img class="count-shape count-sh-02 shape_02" src="{% static 'img/shape/c2.png' %}" alt="">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4">
-                        <div class="counters count-1 text-center mb-50">
-                            <h1 class="mb-30">+<span class="counter">15</span>k</h1>
-                            <h3 class="semi-title">Successful work</h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                        <div class="counters count-2 text-center mb-50">
-                            <h1 class="mb-30"><span class="counter">17</span>%</h1>
-                            <h3 class="semi-title">increase in upgrade conversion</h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                        <div class="counters text-center mb-50">
-                            <h1 class="mb-30">+<span class="counter">40</span>k</h1>
-                            <h3 class="semi-title">Data Management</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+
+      
         <!-- company-statictics end -->
         <!-- get-quote start -->
-        <section class="get-quote grey-yellow-bg pos-rel pt-180 pb-130 pt-md-90 pt-xs-90 pb-md-50 pb-xs-50">
+        {% comment %} <section class="get-quote grey-yellow-bg pos-rel pt-180 pb-130 pt-md-90 pt-xs-90 pb-md-50 pb-xs-50">
             <img class="quote-shape shape_01 d-none d-md-inline-block" src="{% static 'img/shape/08.svg' %}" alt="">
             <img class="quote-shape shape_02 d-none d-md-inline-block" src="{% static 'img/shape/09.svg' %}" alt="">
             <img class="quote-shape shape_03 d-none d-md-inline-block" src="{% static 'img/shape/10.svg' %}" alt="">
@@ -319,10 +253,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <!-- get-quote end -->
         <!-- cat-area start -->
-        <section class="cta-area pos-rel pt-180 pb-150 pt-md-90 pt-xs-90 pb-md-50 pb-xs-50">
+         <section class="cta-area pos-rel pt-170 pb-150 pt-md-90 pt-xs-90 pb-md-50 pb-xs-50">
             <img class="cta-shape shape_01 d-none d-md-inline-block" src="{% static 'img/shape/dot2a.svg' %}" alt="">
             <img class="cta-shape shape_02" src="{% static 'img/cta/01.svg' %}" alt="">
             <div class="container">
@@ -331,8 +265,8 @@
                         <div class="cta__wrapper mb-50 text-center">
                             <div class="section-title">
                                 <h2 class="mb-45">Start visualizing your data today.</h2> 
-                                <h4 class="sub-title mb-45">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt dolor sit amet consectetur </h4>
-                                <a href="services.html" class="theme_btn">More Services</a>
+                                <h4 class="sub-title mb-45">We take big data and create customized visual reporting that is specific to your business model so decisions can be made more effectively throughout your business.</h4>
+                                <a href="{% url 'services' %}" class="theme_btn">More Services</a>
                                 <span class="round-shape"></span>
                             </div>
                         </div>
