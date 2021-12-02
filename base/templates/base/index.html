@@ -3,6 +3,8 @@
 
 {% block active %}active{% endblock active %}
 
+{% block title %}Home{% endblock title %}
+
 
 {% block body %}
 
@@ -23,7 +25,7 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="slider__content fix text-left pt-md-100">
-                                <h1 class="main-title mb-60">Data <span class="vector-shape">Cleaning</span> And<span class="vector-shape">Analytics</span> solutions for organizations.</h1>
+                                <h1 class="main-title mb-60"><span class="vector-shape">Data Science</span> solutions for organizations.</h1>
                                 <h4 class="sub-title mb-50 pr-200 pr-lg-0 pr-md-0 pr-xs-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Libero perspiciatis sequi delectus maxime</h4>
                                     <ul class="slider__text__list mb-75">
                                     <li>Learn with our comprehensive curriculum and experienced.</li>
@@ -31,7 +33,7 @@
                                 </ul>
                                 <ul class="btn__list d-md-inline-flex align-items-center">
                                     <li class="mr-40 mb-20">
-                                        <a href="about.html" class="theme_btn">Learn More</a>
+                                        <a href="{% url 'about' %}" class="theme_btn">Learn More</a>
                                     </li>
                                     <li>
                                         <a href="case-details.html">
