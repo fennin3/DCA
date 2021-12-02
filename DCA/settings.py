@@ -36,7 +36,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["datacareanalytics.herokuapp.com", "www.datacareanalytics.org","datacareanalytics.org" ]
+ALLOWED_HOSTS = ["datacareanalytics.herokuapp.com", "www.datacareanalytics.org","datacareanalytics.org", '127.0.01']
 
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -136,12 +137,19 @@ USE_TZ = True
 #     os.path.join(BASE_DIR, 'static'),
 
 # )
-STATIC_URL = '/static/'
+
+
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type

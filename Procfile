@@ -1,1 +1,1 @@
-web: gunicorn DCA.wsgi
+web: gunicorn DCA.wsgi --log-file -
