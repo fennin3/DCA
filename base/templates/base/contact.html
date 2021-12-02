@@ -1,0 +1,141 @@
+{% extends 'base/layout.html' %}
+{% load static %}
+
+{% block active3 %}active{% endblock active3 %}
+
+{% block body %}
+
+
+    
+
+    <main>
+        <!-- page-title-area start -->
+        <div class="page-title-area yellow-soft-bg-2 pos-rel">
+            <img class="page-shape zigzag_01" src="{% static 'img/shape/03.svg' %}" alt="">
+            <img class="page-shape zigzag_02" src="{% static 'img/line-shape/3a.svg' %}" alt="">
+            <img class="intro-shape shape_02" src="{% static 'img/shape/15.svg' %}" alt="">
+            <div class="page-title-img page-title-img-02">
+                <img class="img-fluid" src="{% static 'img/page-bg/10.png' %}" alt="">
+                <img class="page-shape shape_01" src="{% static 'img/line-shape/3a.svg' %}" alt="">
+                <span class="speacial-text">Contact</span>
+            </div>
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-lg-6">
+                        <div class="page-title-wrapper pt-230 pb-115 pt-md-200 pb-md-25 pt-xs-200 pb-xs-25">
+                            <h1 class="page-title mb-40">Send us your message</h1>
+                            <h4 class="sub-title mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Libero perspiciatis sequi delectus maxime</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- page-title-area end -->
+        <!-- contact-area start -->
+        <section class="contact-area pt-200 pb-130 pt-md-130 pt-xs-130 pb-md-75 pb-xs-75">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="contact-wrapper text-center pr-70 mb-50 pr-lg-0 pr-md-0 pr-xs-0">
+                            <div class="section-title section-title-3 text-center text-lg-left mb-25">
+                                <h2 class="mb-25">Feel free to ask questions or share your comments with us.</h2>
+                                <h5>You can also reach out to us by phone or email.</h5>
+                            </div>
+                            <img class="img-fluid contact-img" src="{% static 'img/ai/04.svg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-6">
+                        <div class="blog-form contact-form grey-bg mb-50">
+                            <h3 class="comments-title mb-35">Send a message</h3>
+                            <h5 class="mb-55">Lorem ipsum dolor sit amet consectetur adipiscing elit.Ut blandit arcu in pretium.</h5>
+                            <form class="subscribe-form" action="#">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-12 black-active mb-20">
+                                        <input type="text" id="name" placeholder="Full Name"> 
+                                    </div>
+                                    <div class="col-xl-6 col-lg-12 mb-20">
+                                        <input type="email" id="email" placeholder="Email Address"> 
+                                    </div>
+                                    <div class="col-lg-12 mb-20">
+                                        <input type="text" id="topic" placeholder="Your topic"> 
+                                    </div>
+                                    <div class="col-lg-12 mb-30">
+                                        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Write your comment "></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                            <button class="theme_btn quote_btn_lg mb-35">Submit Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact-area end -->
+        <!-- info-box-area start -->
+        <section class="info-box-area grey-bg pos-rel pt-150 pb-100 pt-md-60 pt-xs-60 pb-md-50 pb-xs-50">
+            <img class="info-shape shape_01" src="{% static 'img/shape/ia1.svg' %}" alt="">
+            <img class="info-shape shape_02" src="{% static 'img/shape/f1a.svg' %}" alt="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="section-title text-center mb-105">
+                            <h2>Got a <span class="vector-shape">question</span>? We'd love to hear from you and we'll respond as soon as possible.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="info-boxes text-center mb-50">
+                            <img class="mb-35" src="{% static 'img/icon/b1.svg' %}" alt="">
+                            <h3 class="mb-55">Phone</h3>
+                            <h5>+233248532094</h5>
+                            <h5>+233541752049</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="info-boxes text-center mb-50">
+                            <img class="mb-35" src="{% static 'img/icon/b2.svg' %}" alt="">
+                            <h3 class="mb-55">Email</h3>
+                            <h5>datacareanalyticsorg@gmail.com</h5>
+                            <h5>kojo.akrasiennin@gmail.com</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="info-boxes text-center mb-50">
+                            <img class="mb-35" src="{% static 'img/icon/b3.svg' %}" alt="">
+                            <h3 class="mb-55">Location</h3>
+                            {% comment %} <h5>700 Nickerson Road, Suite 250</h5>
+                            <h5> Massachusetts 01752-4715</h5> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- info-box-area end -->
+        <!-- cat-area start -->
+        <section class="cta-area pos-rel pt-180 pb-150 pt-md-90 pt-xs-90 pb-md-50 pb-xs-50">
+            <img class="cta-shape shape_01 d-none d-md-inline-block" src="{% static 'img/shape/dot2a.svg' %}" alt="">
+            <img class="cta-shape shape_02" src="{% static 'img/cta/01.svg' %}" alt="">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-9">
+                        <div class="cta__wrapper mb-50 text-center">
+                            <div class="section-title">
+                                <h2 class="mb-45">Start visualizing your data today.</h2> 
+                                <h4 class="sub-title mb-45">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt dolor sit amet consectetur </h4>
+                                <a href="{% url 'services' %}" class="theme_btn">More Services</a>
+                                <span class="round-shape"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- cat-area end -->
+        
+
+    </main>
+   <!--footer-area start-->
+ 
+
+{% endblock body %}
