@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'base'
+    'base',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -164,6 +165,16 @@ MESSAGE_TAGS = {
         messages.WARNING: 'alert-warning',
         messages.ERROR: 'alert-danger',
  }
+
+
+AWS_ACCESS_KEY_ID = 'AKIA4BFIURCSKTVOIB6G'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'data-care-db'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 
 google_pass = env('gpass')
 
