@@ -176,8 +176,8 @@ EMAIL_HOST_PASSWORD = google_pass
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 
 # django_heroku.settings(locals())
