@@ -47,7 +47,7 @@ def sendMessage(request):
     message=request.POST.get("comment")
 
     tpc = f"DCA - {topic}"
-    msg = '''Name Of Sender: \t\t {}\n\nEmail Of Sender: \t\t{}\n\nMESSAGE\n\n{}'''
+    msg = '''Name Of Sender: \t {}\n\nEmail Of Sender: \t{}\n\nMESSAGE\n\n{}'''.format(name,email,message)
     sending_mail(msg,topic)
     messages.success(request, f"Thank you for reaching out to us, {name}. We will respond as soon as possible.")
     return redirect('home')
